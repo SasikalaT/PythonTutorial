@@ -1,9 +1,9 @@
 import random
 
 while True:
-    #get input of number of dice
     roll_the_dice = input("Roll the dice? (y/n): ").upper()
     if roll_the_dice == "Y":
+        # get input of number of dice
         number_of_dice = int(input("Enter number of dice you want to roll: "))
         if number_of_dice <= 0:
             print("Please enter a number greater than 0")
