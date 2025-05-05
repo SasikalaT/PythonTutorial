@@ -32,15 +32,15 @@ while not game_over:
             display += "_"
 
     print(display)
-
-    if guess not in chosen_word:
-        if guess in guess_letters:
-            print(f"You have already guessed that letter: {guess}")
-        else:
+    if guess in guess_letters:
+        print(f"You have already guessed that letter: {guess}")
+    else:
+        if guess not in chosen_word:
             lives -= 1
             print(f"You guessed: {guess}, that's not in the word. You lose a life.")
             print(f"****************************{lives} LIVES LEFT****************************")
             print(stages[lives])
+
 
     if "_" not in display:
         game_over = True
